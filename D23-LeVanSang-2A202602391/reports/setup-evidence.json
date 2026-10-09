@@ -1,0 +1,30 @@
+{
+  "/healthz": {
+    "region": "a",
+    "alive": true,
+    "ts": 1791516565.0273814
+  },
+  "/v1/state": {
+    "region": "b",
+    "pool_state": "warm",
+    "weights": false,
+    "count": 0,
+    "latest_doc_ts": null,
+    "ts": 1791516565.0499353
+  },
+  "/edge/state": {
+    "active_region": "a",
+    "ttl_seconds": 5.0,
+    "cache_age_s": 0.67
+  },
+  "/v1/infer": {
+    "edge_region": "a",
+    "upstream_status": 200,
+    "edge_latency_ms": 561.7,
+    "region": "a",
+    "answer": "[a] Ticket #0: khach hoi ve hoa don thang 1, so tien 0d",
+    "doc_id": "a-doc-0000",
+    "doc_ingested_at": 1791516460.2156503,
+    "ts": 1791516565.6145875
+  }
+}

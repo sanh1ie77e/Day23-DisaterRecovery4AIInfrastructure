@@ -1,0 +1,24 @@
+{
+  "a": {
+    "region": "a",
+    "ready": true,
+    "reasons": [],
+    "pool_state": "full",
+    "vectors": {
+      "count": 275,
+      "latest_doc_ts": 1791516757.3133254
+    },
+    "ts": 1791516760.245499
+  },
+  "b": {
+    "region": "b",
+    "ready": true,
+    "reasons": [],
+    "pool_state": "full",
+    "vectors": {
+      "count": 216,
+      "latest_doc_ts": 1791516639.2979896
+    },
+    "ts": 1791516760.3039834
+  }
+}

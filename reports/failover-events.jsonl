@@ -1,0 +1,23 @@
+{"ts": 1791515886.9779615, "iso": "2026-10-09T03:18:06Z", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm"}}
+{"ts": 1791515886.979848, "iso": "2026-10-09T03:18:06Z", "step": "2_restore_snapshot", "target": "b", "ok": false, "reason": "snapshot restored, but RPO cannot be measured"}
+{"ts": 1791515963.9896395, "iso": "2026-10-09T03:19:23Z", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm"}}
+{"ts": 1791515963.9911826, "iso": "2026-10-09T03:19:23Z", "step": "2_restore_snapshot", "target": "b", "ok": false, "reason": "snapshot restored, but RPO cannot be measured"}
+{"ts": 1791516396.2276423, "iso": "2026-10-09T03:26:36Z", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm"}}
+{"ts": 1791516396.2366133, "iso": "2026-10-09T03:26:36Z", "step": "2_restore_snapshot", "target": "b", "ok": false, "reason": "snapshot restored, but RPO cannot be measured"}
+{"ts": 1791516647.097649, "iso": "2026-10-09T03:30:47Z", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm", "weights": false, "count": 0, "latest_doc_ts": null, "ts": 1791516647.0953288}}
+{"ts": 1791516647.288408, "iso": "2026-10-09T03:30:47Z", "step": "2_restore_snapshot", "target": "b", "ok": true, "primary_latest_doc_ts": 1791516645.2988527, "restored_latest_doc_ts": 1791516639.2979896, "rpo_seconds": 6.0, "docs_lost": 3, "embed_model_version": "embed-model=vi-e5-base@v3", "snapshot_at": 1791516639.3377864, "duration_s": 0.18647484800000313}
+{"ts": 1791516647.3075688, "iso": "2026-10-09T03:30:47Z", "step": "3_scale_pool", "target": "b", "ok": true, "pool_state": "full"}
+{"ts": 1791516653.3722608, "iso": "2026-10-09T03:30:53Z", "step": "4_wait_ready", "target": "b", "ok": true, "waited_s": 6.059751129999995, "reason": []}
+{"ts": 1791516653.4415781, "iso": "2026-10-09T03:30:53Z", "step": "5_dns_cutover", "target": "b", "ok": true, "active_region": "b"}
+{"ts": 1791516895.0652347, "iso": "2026-10-09T03:34:55Z", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm"}}
+{"ts": 1791516895.1579592, "iso": "2026-10-09T03:34:55Z", "step": "2_restore_snapshot", "target": "b", "ok": true, "primary_latest_doc_ts": 1791516757.3133254, "restored_latest_doc_ts": 1791516639.2979896, "rpo_seconds": 118.02, "docs_lost": 59, "embed_model_version": "test", "snapshot_at": 1791516895.0702877, "duration_s": 0.08766649799999904}
+{"ts": 1791516895.185798, "iso": "2026-10-09T03:34:55Z", "step": "3_scale_pool", "target": "b", "ok": true, "pool_state": "full"}
+{"ts": 1791516896.19164, "iso": "2026-10-09T03:34:56Z", "step": "4_wait_ready", "target": "b", "ok": false, "waited_s": 1.0001882680000005, "reason": "mocked: target khong bao gio ready"}
+{"ts": 1791517723.1132257, "iso": "2026-10-09T03:48:43Z", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm"}}
+{"ts": 1791517723.2283912, "iso": "2026-10-09T03:48:43Z", "step": "2_restore_snapshot", "target": "b", "ok": true, "primary_latest_doc_ts": 1791516757.3133254, "restored_latest_doc_ts": 1791516639.2979896, "rpo_seconds": 118.02, "docs_lost": 59, "embed_model_version": "test", "snapshot_at": 1791517723.124448, "duration_s": 0.10393825700000292}
+{"ts": 1791517723.2537086, "iso": "2026-10-09T03:48:43Z", "step": "3_scale_pool", "target": "b", "ok": true, "pool_state": "full"}
+{"ts": 1791517724.2612817, "iso": "2026-10-09T03:48:44Z", "step": "4_wait_ready", "target": "b", "ok": false, "waited_s": 1.0001778340000023, "reason": "mocked: target khong bao gio ready"}
+{"ts": 1791517733.9841213, "iso": "2026-10-09T03:48:53Z", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm"}}
+{"ts": 1791517734.0583456, "iso": "2026-10-09T03:48:54Z", "step": "2_restore_snapshot", "target": "b", "ok": true, "primary_latest_doc_ts": 1791516757.3133254, "restored_latest_doc_ts": 1791516639.2979896, "rpo_seconds": 118.02, "docs_lost": 59, "embed_model_version": "test", "snapshot_at": 1791517733.990487, "duration_s": 0.06785312200000249}
+{"ts": 1791517734.0841045, "iso": "2026-10-09T03:48:54Z", "step": "3_scale_pool", "target": "b", "ok": true, "pool_state": "full"}
+{"ts": 1791517735.0916698, "iso": "2026-10-09T03:48:55Z", "step": "4_wait_ready", "target": "b", "ok": false, "waited_s": 1.000160332, "reason": "mocked: target khong bao gio ready"}

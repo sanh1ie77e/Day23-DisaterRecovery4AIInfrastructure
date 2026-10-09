@@ -1,0 +1,33 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.4, pytest-8.3.4, pluggy-1.6.0 -- /mnt/d/Phase2.Track2/LABday23 chiều/Day23-DisaterRecovery4AIInfrastructure/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/d/Phase2.Track2/LABday23 chiều/Day23-DisaterRecovery4AIInfrastructure
+plugins: anyio-4.15.1
+collecting ... collected 24 items
+
+tests/test_failover.py::test_rpo_dem_dung_so_doc_bi_mat PASSED           [  4%]
+tests/test_failover.py::test_health_checker_can_threshold_lien_tiep PASSED [  8%]
+tests/test_failover.py::test_failover_khong_cutover_khi_target_chua_ready PASSED [ 12%]
+tests/test_rto_evidence.py::test_drill1_ton_tai_va_khong_phuc_hoi PASSED [ 16%]
+tests/test_rto_evidence.py::test_drill2_hop_le PASSED                    [ 20%]
+tests/test_rto_evidence.py::test_rto_do_duoc_bang_timestamp PASSED       [ 25%]
+tests/test_rto_evidence.py::test_health_check_interval_duoc_ghi_lai PASSED [ 29%]
+tests/test_rto_evidence.py::test_rpo_duoc_do_chu_khong_uoc_luong PASSED  [ 33%]
+tests/test_rto_evidence.py::test_evidence_table_tro_vao_file_that PASSED [ 37%]
+tests/test_rto_evidence.py::test_chaos_khong_giet_ca_hai_region PASSED   [ 41%]
+tests/test_rto_evidence.py::test_evidence_table_da_dien_that PASSED      [ 45%]
+tests/test_rto_evidence.py::test_so_trong_bang_khop_voi_so_trong_log PASSED [ 50%]
+tests/test_rto_evidence.py::test_postmortem_co_gap_analysis PASSED       [ 54%]
+run/test_dr_safety.py::test_actual_readiness_timeout_does_not_cut_over PASSED [ 58%]
+run/test_dr_safety.py::test_missing_snapshot_aborts_before_scale PASSED  [ 62%]
+run/test_dr_safety.py::test_ready_target_cutover_has_complete_order_and_metrics PASSED [ 66%]
+run/test_dr_safety.py::test_manual_confirmation_defaults_to_no[y-True] PASSED [ 70%]
+run/test_dr_safety.py::test_manual_confirmation_defaults_to_no[Y-True] PASSED [ 75%]
+run/test_dr_safety.py::test_manual_confirmation_defaults_to_no[-False] PASSED [ 79%]
+run/test_dr_safety.py::test_manual_confirmation_defaults_to_no[n-False] PASSED [ 83%]
+run/test_dr_safety.py::test_auto_confirmation_does_not_prompt PASSED     [ 87%]
+run/test_dr_safety.py::test_probe_reports_timeout_and_readiness PASSED   [ 91%]
+run/test_dr_safety.py::test_runbook_invokes_failover_once_and_records_seven_steps PASSED [ 95%]
+run/test_dr_safety.py::test_healthy_primary_prevents_failover PASSED     [100%]
+
+============================== 24 passed in 6.27s ==============================

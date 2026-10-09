@@ -1,0 +1,6 @@
+# Linux startup scripts must remain executable by bash after a Windows checkout.
+*.sh text eol=lf
+
+# Preserve the exported submission's SHA256 checksums on every platform.
+D23-LeVanSang-2A202602391/** -text
+*.zip -text

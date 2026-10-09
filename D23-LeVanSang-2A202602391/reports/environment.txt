@@ -1,0 +1,34 @@
+Day 23 local lab environment — LeVanSang-2A202602391
+
+Execution: Ubuntu on WSL 2; all services and chaos use Linux Python.
+Python: 3.14.4 in repository-local .venv.
+Required core versions: fastapi 0.115.6, uvicorn 0.34.0,
+httpx 0.28.1, pytest 8.3.4 (exact versions from requirements.txt).
+Resolved dependencies: reports/environment-lock.txt.
+pip check: No broken requirements found.
+boto3: optional MinIO dependency; not installed because the lab uses backend fs.
+No cloud credentials, cloud account or Docker service is needed.
+
+Region A/B/Edge: 127.0.0.1 ports 8001/8002/8080.
+Initial state: A 200 documents + 2 MB mock weights; B zero documents, no weights.
+Pool warm-up: 6 seconds. Edge TTL: 5 seconds; upstream timeout: 2 seconds.
+Health checker: interval 5 seconds after each probe round, timeout 2 seconds,
+threshold 3 consecutive failures. Threshold resets on a successful probe.
+Replication: every 30 seconds for 150 seconds, backend fs.
+Ingest: 0.5 documents per second for 150 seconds.
+Baseline traffic: 40 seconds at configured 2 requests/second; outage after 8 seconds.
+DR traffic/checker: 100 seconds; start after first snapshot and 5-second wait;
+outage 12 seconds after traffic/checker launch.
+Runbook: primary a, target b, backend fs, --auto for this graded drill only.
+Chaos: --region a --mode netblock --mock; --backend bare when restoring.
+
+Windows compatibility fixes: scripts/up_bare.sh and down_bare.sh were normalized
+from CRLF to LF without changing their commands. REGION/STATE_DIR are set by
+up_bare.sh. Python Windows lacks SIGSTOP/SIGCONT, so it is not used for chaos.
+The repo's type syntax needs Python 3.10+ despite the slide mentioning 3.8+.
+
+Process coordination: run/execute_drills.py calls the existing GUIDE scripts;
+each background process has an explicit working directory and run/*.log output.
+It restores Region A after baseline, preserves real JSONL logs, verifies both
+regions ready after the DR drill, and stops only the lab's tracked processes.
+Reports are derived by run/write_reports.py; no log timestamps are rewritten.
